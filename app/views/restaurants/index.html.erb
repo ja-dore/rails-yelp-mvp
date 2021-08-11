@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>RESTAURANTS</h1>
+        <ul class='list-unstyled'>
+        <% @restaurants.each do |restaurant| %>
+          <li>
+            <%= link_to restaurant.name, restaurant_path(restaurant)%>
+          </li>
+        <% end %>
+        </ul>
+        <%= link_to new_restaurant_path do %>
+        <i class="fas fa-plus"> add a new resto </i>
+        <% end %>
+    </div>
+  </div>
+</div>
